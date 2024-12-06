@@ -31,7 +31,7 @@
     <section class="call-to-action">
         <h2>Ready to Transform Your HR Operations?</h2>
         <p>Join hundreds of organizations using MK's HRMS to enhance efficiency, reduce errors, and nurture a thriving workforce.</p>
-        <a href="login.php" class="btn btn-primary">Login Now</a>
+        <a href="login.php" class="btn btn-primary">Get Started</a>
     </section>
 </div>
 <?php require '../includes/footer.php'; ?>
