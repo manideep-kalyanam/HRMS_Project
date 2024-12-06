@@ -1,0 +1,662 @@
+/* General Page Styling */
+html, body {
+    font-family: Arial, sans-serif;
+    background-color: #E6F2FF;
+    color: #212121;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.dashboard-container h1 {
+    color: #0056D2; 
+    margin-bottom: 20px;
+}
+
+.dashboard-container h2 {
+    color: #0056D2;
+    margin-bottom: 30px;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    max-width: 50%;
+    text-align: center;
+}
+
+.dashboard-grid a img {
+    border-radius: 12px;
+    width: 100px;
+    height: 100px;
+    transition: transform 0.2s;
+}
+
+.dashboard-grid a:hover img {
+    transform: scale(1.1); 
+}
+
+/* Logout Section */
+.logout-section {
+    margin-top: 40px;
+}
+
+.logout-button {
+    background-color: #0056D2; 
+    color: #FFFFFF; 
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #D0E7FF; 
+}
+
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+.site-header {
+    background-color: #0056D2; 
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; 
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #87CEEB;
+}
+
+/* Footer Styling */
+.site-footer {
+    background-color: #0056D2;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Employees Page Specific */
+
+/* Header */
+.manage-employees-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+    max-width: 90%;
+}
+
+.manage-employees-header h1 {
+    color: #0056D2;
+    font-size: 24px;
+    margin: 0;
+}
+
+.add-employee-button {
+    background-color: #0056D2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-employee-button:hover {
+    background-color: #87CEEB; 
+    transform: translateY(-2px); 
+}
+
+/* Add Employee Form */
+.add-employee-form {
+    max-width: 600px; 
+    margin: 20px auto;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #ddd;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+/* Form Groups */
+.form-group {
+    flex: 1 1 calc(50% - 20px); 
+    display: flex;
+    flex-direction: column; 
+    gap: 5px; 
+}
+
+.form-group.full-width {
+    flex: 1 1 100%; 
+}
+
+/* Labels */
+.add-employee-form label {
+    font-weight: bold;
+    color: #0056D2;
+    margin-bottom: 5px;
+}
+
+/* Inputs */
+.add-employee-form input[type="text"],
+.add-employee-form input[type="email"],
+.add-employee-form input[type="date"] {
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 10px;
+    border: 1px solid #B0BEC5;
+    border-radius: 5px; 
+    font-size: 14px; 
+}
+
+/* Button */
+.add-employee-form button {
+    background-color: #0056D2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+.add-employee-form button:hover {
+    background-color: #87CEEB;
+}
+
+/* Employees Table */
+.employee-table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.employee-table th, .employee-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.employee-table th {
+    background-color: #DCEFFF; 
+    color: #0056D2;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.employee-table tr:hover {
+    background-color: #D0E7FF; 
+}
+
+.employee-table td {
+    font-size: 14px;
+}
+
+/* Action Buttons */
+.icon-button img {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.icon-button img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* Edit Form (Modal or Inline) */
+#editForm {
+    display: none;
+    background-color: #FFFFFF;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#editForm h2 {
+    color: #0056D2;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#editForm form input, #editForm form select, #editForm form button {
+    width: calc(100% - 20px);
+    margin: 10px 10px 10px 0;
+    padding: 10px;
+    border: 1px solid #B0BEC5;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#editForm form button {
+    background-color: #0056D2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#editForm form button:hover {
+    background-color: #87CEEB;
+}
+
+/* Attendance Page Styling */
+h1 {
+    color: #0056D2; 
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.view-button, form button {
+    background-color: #0056D2;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-button:hover, form button:hover {
+    background-color: #87CEEB; 
+}
+
+/* Attendance Table */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #F0F8FF;
+    color: #0056D2;
+    font-weight: bold;
+}
+
+table tr:hover {
+    background-color: #D0E7FF; 
+}
+
+table td {
+    font-size: 14px;
+}
+
+/* Edit Mode */
+.edit-mode {
+    display: none;
+}
+
+.edit-button {
+    background-color: #0056D2;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+    background-color: #87CEEB; 
+}
+
+.save-button {
+    background-color: #66BB6A; 
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.save-button:hover {
+    background-color: #57A05A;
+}
+
+
+/* Success and Error States */
+.success-button {
+    background-color: #66BB6A; 
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.success-button:hover {
+    background-color: #57A05A;
+}
+
+.error-button {
+    background-color: #FF5252; 
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.error-button:hover {
+    background-color: #E64848;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Add Employee Form */
+form {
+    max-width: 500px; 
+    margin: 20px auto;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    display: grid; 
+    gap: 15px; 
+}
+
+form input, form select, form button {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #B0BEC5;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form button {
+    background-color: #0056D2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+form button:hover {
+    background-color: #87CEEB;
+}
+
+/* Edit Employee Form */
+.edit-employee-form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #FFFFFF; 
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #ddd; 
+}
+
+.edit-employee-form {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+/* Form Groups */
+.edit-employee-form .form-group {
+    flex: 1 1 calc(50% - 20px); 
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-employee-form .form-group.full-width {
+    flex: 1 1 100%; 
+}
+
+/* Labels */
+.edit-employee-form label {
+    font-weight: bold;
+    color: #0056D2;
+    margin-bottom: 5px;
+}
+
+/* Inputs */
+.edit-employee-form input {
+    padding: 10px;
+    border: 1px solid #B0BEC5; 
+    border-radius: 5px; 
+    font-size: 14px;
+}
+
+/* Buttons */
+.update-button, .cancel-button {
+    background-color: #0056D2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.update-button:hover, .cancel-button:hover {
+    background-color: #87CEEB; 
+}
+
+.edit-attendance-form-container {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.edit-attendance-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-attendance-form .form-group {
+    margin-bottom: 15px;
+}
+
+.edit-attendance-form .form-group label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.edit-attendance-form .form-group input,
+.edit-attendance-form .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.edit-attendance-form .update-button {
+    background: #0056D2;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.edit-attendance-form .cancel-button {
+    background: #ccc;
+    color: #333;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #0056D2;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.edit-payroll-form-container {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.edit-payroll-form .form-group {
+    margin-bottom: 15px;
+}
+
+.edit-payroll-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.edit-payroll-form .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.hidden {
+    display: none;
+}
+
+#payrollChart {
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+/* Attendance Form Styling */
+.attendance-form {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 15px; 
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Flex row for the form */
+.form-row {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+    justify-content: space-between; 
+    width: 100%;
+}
+
+.attendance-form .form-group {
+    display: flex;
+    flex-direction: column; 
+    margin: 0; 
+}
+
+.attendance-form .form-group input[type="date"] {
+    width: auto;
+    max-width: 300px;
+}
+
+.attendance-form .form-group button {
+    width: auto;
+    padding: 10px 20px;
+}
